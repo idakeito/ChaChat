@@ -1,0 +1,6 @@
+<%= form_with model: @user, 
+    data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" } do |f| %>
+  <%= f.label :username, 'ユーザー名を入力してください' %>
+  <%= f.text_field :username, autocomplete: 'off' %>
+  <%= f.submit 'ログイン' %>
+<% end %>
